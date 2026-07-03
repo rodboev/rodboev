@@ -1,6 +1,6 @@
-Daily stats: [GitHub Contributions](https://basedin.nyc/pr-stats/)
+Daily stats: ["LGTM!" Leaderboard](https://basedin.nyc/)
 
-Article: [What Agent Orchestration Platforms Get Wrong](https://www.linkedin.com/pulse/what-agent-orchestration-platforms-get-wrong-rod-boev-9m7bc/)
+LinkedIn article: [What Agent Orchestration Platforms Get Wrong](https://www.linkedin.com/pulse/what-agent-orchestration-platforms-get-wrong-rod-boev-9m7bc/)
 
 ## My workflow
 
