@@ -1,202 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 952 568.5">
+<svg id="wf" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="10 10 940 998">
   <style>
-    text { font-family: ArialMT, Arial }
-    .h1, .h2, .h3, .h4, .panel-label, .band-label { font-family: Arial-BoldMT, Arial; font-weight: 700 }
-    .h1, .h2, .h3, .h4 { fill: #e8e8e8 }
-    .h1 { font-size: 15px }
-    .h2 { font-size: 14px }
-    .h3 { font-size: 13px }
-    .h4 { font-size: 12px }
-    .item, .subitem, .subitem-alt { fill: #95d5b2 }
-    .item { font-size: 11px }
-    .subitem, .subitem-alt { font-size: 10px }
-    .subitem-alt { font-family: HelveticaNeueLTPro-Roman, 'Helvetica Neue LT Pro' }
-    .note { font-size: 10px; fill: #d4a040 }
-    .panel-label { font-size: 9px; fill: #d4a040 }
-    .edge-label { font-size: 9px; fill: #52b788 }
-    .fail-label { font-size: 10px; fill: #c06060 }
-    .band-label { font-size: 10px; fill: #3a7a5a; letter-spacing: .15em }
-    .band { fill: #081c15; stroke: #1b4332 }
-    .box { fill: #1b4332; stroke: #40916c; stroke-width: 1.5px }
-    .panel { fill: #14291e; stroke: #d4a040 }
-    .panel-dash { fill: #14291e; stroke: #d4a040; stroke-dasharray: 4 3 }
-    .diamond { fill: #14291e; stroke: #d4a040; stroke-width: 1.5px }
-    .flow { fill: none; stroke: #52b788; stroke-width: 1.5px }
-    .flow-head { fill: #52b788 }
-    .gold-line { fill: none; stroke: #d4a040 }
-    .gold-dash { fill: none; stroke: #d4a040; stroke-dasharray: 4 3 }
-    .gold-head { fill: #d4a040 }
-    .fail-line { fill: none; stroke: #c06060; stroke-width: 1.5px; stroke-dasharray: 6 4 }
-    .fail-head { fill: #c06060 }
+    #wf text { font-family: 'Avenir Next', Avenir, 'Segoe UI', Helvetica, Arial, sans-serif }
+    #wf .lane { fill: rgba(0,0,0,.31); stroke: none; stroke-width: 1px }
+    #wf .box { fill: #294345; stroke: #5fd4c0; stroke-width: 1.5px }
+    #wf .box-claude { fill: #463d2f; stroke: #f0b452; stroke-width: 1.5px }
+    #wf .box-sol { fill: #2e3950; stroke: #7aa2f7; stroke-width: 1.5px }
+    #wf .box-ready { fill: #354f41; stroke: #7fd98f; stroke-width: 3px }
+    #wf .h { font-size: 13px; font-weight: 700; fill: #e7e9ee; text-anchor: middle }
+    #wf .i { font-size: 11px; fill: #d0d5dd; text-anchor: middle }
+    #wf .note { font-size: 10px; fill: #f0b452 }
+    #wf .edge { font-size: 10px; fill: #99a1ad }
+    #wf .failt { font-size: 10px; fill: #f07178 }
+    #wf .lane-h { font-size: 12px; font-weight: 700; letter-spacing: .15em; text-anchor: middle }
+    #wf .flow { fill: none; stroke: #6fc7b8; stroke-width: 1.5px; marker-end: url(#wf-m-flow) }
+    #wf .gold { fill: none; stroke: #f0b452; stroke-width: 1.3px; stroke-dasharray: 4 3; marker-end: url(#wf-m-gold) }
+    #wf .fail { fill: none; stroke: #f07178; stroke-width: 1.5px; stroke-dasharray: 6 4; marker-end: url(#wf-m-fail) }
   </style>
+  <defs>
+    <marker id="wf-m-flow" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0L8,3L0,6z" fill="#6fc7b8"/></marker>
+    <marker id="wf-m-gold" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0L8,3L0,6z" fill="#f0b452"/></marker>
+    <marker id="wf-m-fail" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0L8,3L0,6z" fill="#f07178"/></marker>
+  </defs>
 
-  <rect class="band" x="1.5" y=".5" width="950" height="207" rx="10" ry="10"/>
-  <rect class="band" x=".5" y="349.5" width="950" height="218.5" rx="10" ry="10"/>
-  <text class="band-label" x="14.5" y="20.5">PIPELINE</text>
+    <rect class="lane" x="10" y="10" width="300" height="998" rx="10"/>
+    <rect class="lane" x="330" y="10" width="300" height="998" rx="10"/>
+    <rect class="lane" x="650" y="10" width="300" height="998" rx="10"/>
+    <text class="lane-h" x="160" y="38" fill="#f0b452">CLAUDE</text>
+    <text class="lane-h" x="480" y="38" fill="#5fd4c0">ORCHESTRATOR</text>
+    <text class="i" x="480" y="54">writes no code</text>
+    <text class="lane-h" x="800" y="38" fill="#7aa2f7">CODEX</text>
 
-  <!-- Research -->
-  <rect class="box" x="12.18" y="33.5" width="148" height="140.31" rx="8" ry="8"/>
-  <text class="h1" x="52.4" y="58.5">Research</text>
-  <text class="item" x="39.4" y="79.5">codebase structure</text>
-  <text class="item" x="45.51" y="95.5">layer boundaries</text>
-  <text class="item" x="38.17" y="111.5">data variant lineage</text>
-  <text class="item" x="25.95" y="127.5">issue search dimensions</text>
-  <text class="item" x="39.4" y="143.5">CI and merge rules</text>
-  <text class="item" x="45.52" y="158.5">repo style norms</text>
+    <rect x="350" y="70" width="260" height="54" rx="8" fill="none" stroke="#5fd4c0" stroke-width="1.5" stroke-dasharray="5 3"/>
+    <text class="h" x="480" y="93">Design or intent</text>
+    <text class="i" x="480" y="111">one goal split into PR-sized slices</text>
+    <path class="flow" d="M480,124V154"/>
+    <text class="edge" x="488" y="143">next slice, or an issue</text>
+    <rect class="box" x="350" y="154" width="260" height="54" rx="8"/>
+    <text class="h" x="480" y="177">Read and reproduce</text>
+    <text class="i" x="480" y="195">check it’s still needed and unclaimed</text>
+    <path class="flow" d="M480,208V234"/>
 
-  <path class="flow" d="M159.5,102.5h18"/>
-  <polygon class="flow-head" points="177.5 99.5 185.5 102.5 177.5 105.5 177.5 99.5"/>
+    <rect class="box-claude" x="30" y="234" width="260" height="54" rx="8"/>
+    <text class="h" x="160" y="257">Opus plans alone</text>
+    <text class="i" x="160" y="275">from the issue and the code</text>
+    <rect class="box" x="350" y="234" width="260" height="54" rx="8"/>
+    <text class="h" x="480" y="257">Merge</text>
+    <text class="i" x="480" y="275">smallest correct plan</text>
+    <rect class="box-sol" x="670" y="234" width="260" height="54" rx="8"/>
+    <text class="h" x="800" y="257">Sol plans alone</text>
+    <text class="i" x="800" y="275">from the issue and the code</text>
+    <path class="flow" d="M290,261H350"/><path class="flow" d="M670,261H610"/>
+    <path class="flow" d="M480,288V314"/>
 
-  <!-- Find -->
-  <rect class="box" x="185.79" y="33.5" width="168" height="140.31" rx="8" ry="8"/>
-  <text class="h1" x="253.96" y="58.5">Find</text>
-  <text class="item" x="219.65" y="79.5">parallel issue search</text>
-  <text class="item" x="218.13" y="95.5">freshness verification</text>
-  <text class="item" x="218.12" y="111.5">issue-thread analysis</text>
-  <text class="item" x="216.91" y="127.5">competing-PR search</text>
-  <text class="item" x="225.4" y="143.5">claimed-work filter</text>
-  <text class="item" x="218.13" y="158.5">architectural fit check</text>
+    <rect class="box-claude" x="30" y="314" width="260" height="54" rx="8"/>
+    <text class="h" x="160" y="337">Opus re-derives it</text>
+    <text class="i" x="160" y="355">from scratch, then diffs the merge</text>
+    <rect class="box" x="350" y="314" width="260" height="54" rx="8"/>
+    <text class="h" x="480" y="337">Fix the plan</text>
+    <text class="i" x="480" y="355">wherever the two differ</text>
+    <path class="flow" d="M290,341H350"/><path class="flow" d="M610,341H800V380"/>
+    <rect class="box-sol" x="670" y="380" width="260" height="54" rx="8"/>
+    <text class="h" x="800" y="403">Sol codes</text>
+    <text class="i" x="800" y="421">in its own worktree</text>
 
-  <path class="flow" d="M353.5,102.5h18"/>
-  <polygon class="flow-head" points="371.5 99.5 379.5 102.5 371.5 105.5 371.5 99.5"/>
+    <rect class="box-claude" x="30" y="484" width="260" height="54" rx="8"/>
+    <text class="h" x="160" y="507">Claude reviews</text>
+    <text class="i" x="160" y="525">no plan; round 1 also checks the issue</text>
+    <rect class="box" x="350" y="484" width="260" height="54" rx="8"/>
+    <text class="h" x="480" y="507">Judge findings</text>
+    <text class="i" x="480" y="525">a rejection needs the other model</text>
+    <rect class="box-sol" x="670" y="484" width="260" height="54" rx="8"/>
+    <text class="h" x="800" y="507">Sol reviews</text>
+    <text class="i" x="800" y="525">fresh each round, no plan</text>
+    <path class="flow" d="M290,511H350"/><path class="flow" d="M670,511H610"/>
+    <path class="flow" d="M590,484V450H760V434"/>
+    <text class="edge" x="760" y="464" text-anchor="middle">fix findings</text>
+    <path class="gold" d="M350,496H320V348" style="marker-end:none"/><path class="gold" d="M320,334V276H350"/>
+    <text class="note" x="338" y="403" font-weight="700">back to planning when</text>
+    <text class="note" x="338" y="417">· the same part needs a second fix</text>
+    <text class="note" x="338" y="430">· a fix needs a part the plan lacks</text>
+    <text class="note" x="338" y="443">· 3 rounds without fewer serious findings</text>
+    <text class="note" x="338" y="456">· a reviewer calls for a redesign</text>
 
-  <!-- Architecture Decision -->
-  <rect class="box" x="380.51" y="20.5" width="321" height="171" rx="8" ry="8"/>
-  <text class="h1" x="463.49" y="43.5">Architecture Decision</text>
-  <rect class="panel-dash" x="394.2" y="55.26" width="125.24" height="125.24" rx="4" ry="4"/>
-  <text class="panel-label" x="409.64" y="71.5">REQUIRED ANALYSIS</text>
-  <text class="subitem" x="419.94" y="87.5">affected concern</text>
-  <text class="subitem" x="421.23" y="101.5">code path count</text>
-  <text class="note" x="414.29" y="115.5">ownership decision</text>
-  <text class="subitem" x="411.23" y="129">change amplification</text>
-  <text class="subitem" x="403.74" y="143">downstream consumers</text>
-  <text class="subitem-alt" x="435.43" y="156.5">invariants</text>
-  <text class="subitem" x="429.31" y="170">bypass risks</text>
-  <path class="gold-line" d="M519.71,112h15.79"/>
-  <polygon class="gold-head" points="535.5 109 543.5 112 535.5 115 535.5 109"/>
+    <path class="flow" d="M480,538V564"/>
+    <rect x="180" y="564" width="600" height="170" rx="8" fill="#1b1f26" stroke="#f0b452" stroke-opacity=".7"/>
+    <text class="note" x="480" y="585" text-anchor="middle" font-weight="700" letter-spacing=".12em">SMALLEST CORRECT DESIGN</text>
+    <rect x="200" y="598" width="270" height="48" rx="6" fill="#232832" stroke="#333a46"/>
+    <circle cx="224" cy="622" r="13" fill="#1b1f26" stroke="#f0b452"/>
+    <g transform="translate(224,622)" fill="none" stroke="#f0b452" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-8,0H-2M-5,-3L-2,0L-5,3M8,0H2M5,-3L2,0L5,3"/></g>
+    <text x="246" y="618" font-size="10.5" fill="#d0d5dd">The PR grew past its plan</text>
+    <text x="246" y="634" font-size="12" font-weight="700" fill="#e7e9ee">Opus trims what nobody asked for</text>
+    <rect x="490" y="598" width="270" height="48" rx="6" fill="#232832" stroke="#333a46"/>
+    <circle cx="514" cy="622" r="13" fill="#1b1f26" stroke="#f0b452"/>
+    <g transform="translate(514,622)" fill="none" stroke="#f0b452" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-4,-4L4,4M4,-4L-4,4"/></g>
+    <text x="536" y="618" font-size="10.5" fill="#d0d5dd">A review flags code nobody asked for</text>
+    <text x="536" y="634" font-size="12" font-weight="700" fill="#e7e9ee">Delete it instead of fixing it</text>
+    <rect x="200" y="666" width="270" height="48" rx="6" fill="#232832" stroke="#333a46"/>
+    <circle cx="224" cy="690" r="13" fill="#1b1f26" stroke="#f0b452"/>
+    <g transform="translate(224,690)" fill="none" stroke="#f0b452" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5,-2.5A6,6 0 1 0 6,2"/><path d="M6,-6.5V-2H1.5"/></g>
+    <text x="246" y="686" font-size="10.5" fill="#d0d5dd">A serious finding shows the design is wrong</text>
+    <text x="246" y="702" font-size="12" font-weight="700" fill="#e7e9ee">Both models plan again</text>
+    <rect x="490" y="666" width="270" height="48" rx="6" fill="#232832" stroke="#333a46"/>
+    <circle cx="514" cy="690" r="13" fill="#1b1f26" stroke="#f0b452"/>
+    <g transform="translate(514,690)" fill="none" stroke="#f0b452" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-6,-5H6L1.5,0.5V5.5L-1.5,4V0.5Z"/></g>
+    <text x="536" y="686" font-size="10.5" fill="#d0d5dd">A third plan still won’t settle</text>
+    <text x="536" y="702" font-size="12" font-weight="700" fill="#e7e9ee">Opus cuts to the smallest useful PR</text>
+    <path class="flow" d="M480,734V774"/>
+    <text class="edge" x="488" y="758">review cap (min 2 rounds)</text>
 
-  <path class="flow" d="M701.5,102.5h18"/>
-  <polygon class="flow-head" points="719.5 99.5 727.5 102.5 719.5 105.5 719.5 99.5"/>
+    <rect class="box-claude" x="30" y="774" width="260" height="54" rx="8"/>
+    <text class="h" x="160" y="797">Before each push</text>
+    <text class="i" x="160" y="815">Sonnet trims tests, Opus writes the body</text>
+    <rect class="box" x="350" y="774" width="260" height="54" rx="8"/>
+    <text class="h" x="480" y="797">Push a draft PR</text>
+    <text class="i" x="480" y="815">link it everywhere it belongs</text>
+    <path class="flow" d="M290,801H350"/>
+    <path class="flow" d="M480,828V854"/>
 
-  <!-- Spec Competition -->
-  <rect class="box" x="728.76" y="28.5" width="207.86" height="150" rx="8" ry="8"/>
-  <text class="h2" x="773.19" y="51.5">Spec Competition</text>
-  <text class="item" x="770.49" y="72.5">A + B → C plan synthesis</text>
-  <text class="item" x="766.34" y="88.5">approach comparison table</text>
-  <text class="item" x="772.47" y="104.5">required evidence matrix</text>
-  <text class="item" x="772.16" y="120.5">mandatory test coverage</text>
-  <text class="item" x="762.07" y="135.5">deterministic validation gates</text>
-  <text class="item" x="777.67" y="150.5">architectural fit scoring</text>
-  <text class="item" x="768.49" y="164.5">data variant completeness</text>
+    <rect class="box" x="350" y="854" width="260" height="54" rx="8"/>
+    <text class="h" x="480" y="877">Converge</text>
+    <text class="i" x="480" y="895">watch CI and triage bot feedback on each push</text>
+    <path class="fail" d="M610,881H942V407H930"/>
+    <text class="failt" x="790" y="859" text-anchor="middle">CI failure, bot finding, maintainer feedback,</text>
+    <text class="failt" x="790" y="872" text-anchor="middle">or a final review finding</text>
+    <path class="flow" d="M480,908V938"/>
+    <text class="edge" x="488" y="927">CI and bots pass</text>
 
-  <path class="flow" d="M821.5,178.5v38.5h-489.5v10"/>
-  <polygon class="flow-head" points="329 227 332 235 335 227 329 227"/>
-  <text class="note" x="261.02" y="190.25">pre-approved</text>
-  <text class="note" x="253.22" y="201.25">implementation</text>
-  <text class="note" x="830" y="191.5">decomposition</text>
-  <text class="note" x="830" y="201.5">into slices</text>
+    <rect class="box-ready" x="350" y="938" width="260" height="54" rx="8"/>
+    <text class="h" x="480" y="961">Ready</text>
+    <text class="i" x="480" y="979">fresh eyes review it as a maintainer would</text>
+  </svg>
 
-  <!-- Reality Gate -->
-  <polygon class="diamond" points="331.67 236 381.67 281 331.67 326 281.67 281 331.67 236"/>
-  <text class="h4" x="312" y="276.5">Reality</text>
-  <text class="h4" x="317.33" y="291.5">Gate</text>
-  <rect class="panel-dash" x="391.89" y="226.5" width="278.14" height="107.21" rx="4" ry="4"/>
-  <text class="panel-label" x="471.21" y="244.5">TRUTH-OWNER SURFACES</text>
-  <text class="subitem" x="435.49" y="262.5">browser chrome</text>
-  <text class="subitem" x="441.6" y="275.5">provider APIs</text>
-  <text class="subitem" x="442.16" y="288.5">live registries</text>
-  <text class="subitem" x="425.76" y="302.5">maintainer decisions</text>
-  <text class="subitem" x="550.05" y="262.5">hardware/runtime</text>
-  <text class="subitem" x="550.06" y="275.5">security protocols</text>
-  <text class="subitem" x="552.83" y="288.5">live concurrency</text>
-  <text class="subitem" x="562.56" y="302.5">rendered UI</text>
-  <text class="note" x="439.4" y="323.5">unreachable proof</text>
-  <path class="gold-line" d="M527.22,321.07h10"/>
-  <polygon class="gold-head" points="537.22 318.07 545.22 321.07 537.22 324.07 537.22 318.07"/>
-  <text class="note" x="551.38" y="323.62">drop / ask / hold</text>
-
-  <path class="flow" d="M332,326v12.5H120.5v38"/>
-  <polygon class="flow-head" points="117.5 376.5 120.5 384.5 123.5 376.5 117.5 376.5"/>
-  <path class="fail-line" d="M460.5,420.5v-51H135.5v10"/>
-  <polygon class="fail-head" points="132.5 377.5 135.5 383.5 138.5 377.5 132.5 377.5"/>
-  <text class="fail-label" x="296.12" y="363.5">fail</text>
-  <text class="band-label" x="14.5" y="370.5">QUALITY LOOP</text>
-
-  <!-- Code -->
-  <rect class="box" x="15.08" y="384.31" width="150" height="166.48" rx="8" ry="8"/>
-  <text class="h1" x="71.33" y="411.31">Code</text>
-  <text class="item" x="32.61" y="430.81">isolated worktree builds</text>
-  <text class="item" x="29.55" y="445.81">mandatory test coverage</text>
-  <text class="item" x="31.07" y="460.81">evidence plan execution</text>
-  <text class="item" x="38.11" y="475.81">verbatim proof output</text>
-  <text class="item" x="30.17" y="490.81">regression test contracts</text>
-  <text class="item" x="36.3" y="505.81">workers never commit</text>
-  <text class="item" x="37.81" y="520.81">layer placement audit</text>
-  <text class="item" x="42.7" y="535.81">visual render check</text>
-
-  <path class="flow" d="M165.5,464.5h21"/>
-  <polygon class="flow-head" points="186.5 461.5 194.5 464.5 186.5 467.5 186.5 461.5"/>
-
-  <!-- Adversarial Review -->
-  <rect class="box" x="195.72" y="384.5" width="185" height="166.29" rx="8" ry="8"/>
-  <text class="h2" x="224.02" y="411.5">Adversarial Review</text>
-  <text class="item" x="235.96" y="431">cross-provider review</text>
-  <text class="item" x="241.16" y="446">same-family review</text>
-  <text class="item" x="251.54" y="461">call-site tracing</text>
-  <text class="item" x="245.12" y="476">import verification</text>
-  <text class="item" x="228.91" y="491">stale assertion detection</text>
-  <text class="item" x="230.44" y="506">proof spot-check reruns</text>
-  <text class="item" x="230.14" y="521">architecture compliance</text>
-  <text class="item" x="229.22" y="536">render lint · design rules</text>
-
-  <path class="flow" d="M380.5,464.5h23"/>
-  <polygon class="flow-head" points="403.5 461.5 411.5 464.5 403.5 467.5 403.5 461.5"/>
-  <polygon class="diamond" points="460.5 420.5 508.5 464.5 460.5 508.5 412.5 464.5 460.5 420.5"/>
-  <text class="h3" x="446.05" y="460.5">Gate</text>
-  <text class="note" x="430.5" y="476.5">deterministic</text>
-  <path class="flow" d="M508.5,464.5h25"/>
-  <polygon class="flow-head" points="533.5 461.5 541.5 464.5 533.5 467.5 533.5 461.5"/>
-  <text class="edge-label" x="508.5" y="455.5">publish</text>
-
-  <!-- Converge -->
-  <rect class="box" x="542.49" y="388.5" width="175" height="150" rx="8" ry="8"/>
-  <text class="h1" x="595.4" y="416.5">Converge</text>
-  <text class="item" x="590.86" y="437.5">CI status polling</text>
-  <text class="item" x="582.91" y="454.5">bot comment triage</text>
-  <text class="item" x="585.35" y="471.5">reviewer feedback</text>
-  <text class="item" x="574.95" y="488.5">scope-guarded rebase</text>
-  <text class="item" x="593" y="505.5">per-repo timing</text>
-  <text class="item" x="581.99" y="522.5">quiet-window check</text>
-
-  <path class="flow" d="M717.5,464.5h38"/>
-  <polygon class="flow-head" points="755.5 461.5 763.5 464.5 755.5 467.5 755.5 461.5"/>
-  <text class="edge-label" x="721.99" y="455.5">feedback</text>
-
-  <!-- Rework -->
-  <rect class="box" x="764.02" y="388.5" width="173" height="150" rx="8" ry="8"/>
-  <text class="h1" x="823.43" y="414.5">Rework</text>
-  <text class="item" x="810.78" y="433">failure diagnosis</text>
-  <text class="item" x="802.36" y="448">round 2+ escalation</text>
-  <text class="item" x="791.21" y="463">related-site enumeration</text>
-  <text class="item" x="781.75" y="478">extraction over per-site fixes</text>
-  <text class="item" x="784.48" y="493">proof covers what changed</text>
-  <text class="item" x="812.92" y="508">plan · fix · push</text>
-  <text class="item" x="809.55" y="523">thread resolution</text>
-
-  <path class="flow" d="M837,538.5c-91,24.68-387,25.91-452,1.23"/>
-  <polygon class="flow-head" points="389.5 537.5 380.5 536.5 386.5 542.5 389.5 537.5"/>
-
-  <!-- Shared Authority panel -->
-  <rect class="panel" x="543.89" y="58.21" width="142.42" height="119.96" rx="4" ry="4"/>
-  <text class="panel-label" x="568.76" y="75.21">SHARED AUTHORITY</text>
-  <text class="note" x="577.86" y="92.21">all mutation sites</text>
-  <text class="subitem" x="565.92" y="106.21">search-derived writers</text>
-  <text class="note" x="580.64" y="126.21">state distinction</text>
-  <text class="subitem" x="558.68" y="140.21">absent/defaulted/user-set</text>
-  <text class="subitem" x="562.3" y="153.21">extraction contract tests</text>
-  <text class="subitem" x="555.06" y="167.21">proof covers what changed</text>
-
-  <polyline class="gold-dash" points="332.05 208.32 332.05 180.12 377.5 180.12"/>
-  <polygon class="gold-head" points="335.05 208.32 332.05 216.32 329.05 208.32 335.05 208.32"/>
-</svg>
